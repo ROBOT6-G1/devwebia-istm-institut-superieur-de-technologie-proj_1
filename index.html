@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institut Supérieur de Technologie & Management | ISTM</title>
+  <meta name="description" content="Institut Supérieur de Technologie & Management - Formez votre avenir avec des experts métier. Diplômes reconnus, corps professoral d'exception et campus ultra-connecté.">
+  <meta name="keywords" content="ISTM, Université, Formation Professionnelle, Technologie, Management, Licence, Master, Madagascar, Cours du Soir">
+  
+  <!-- Open Graph / Meta Réseaux Sociaux -->
+  <meta property="og:title" content="Institut Supérieur de Technologie & Management">
+  <meta property="og:description" content="Excellence académique et insertion professionnelle garantie.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200">
+
+  <!-- Manifest & PWA Meta -->
+  <meta name="theme-color" content="#059669">
+  <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=180">
+  
+  <!-- Tailwind CSS v4 & FontAwesome -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Data Structure -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Institut Supérieur de Technologie & Management",
+    "alternateName": "ISTM",
+    "url": "https://istm-edu.mg",
+    "logo": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=300",
+    "description": "Établissement supérieur d'enseignement technique et de gestion de haut niveau.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenue des Innovation, Quartier Académique",
+      "addressLocality": "Antananarivo",
+      "addressCountry": "MG"
+    }
+  }
+  </script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .text-gradient { background: linear-gradient(135deg, #059669 0%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .bg-emerald-gradient { background: linear-gradient(135deg, #047857 0%, #059669 50%, #10b981 100%); }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- BARRE D'INFORMATION DE TÊTE -->
+  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-6">
+        <span data-cms="site-phone"><i class="fa-solid fa-phone text-emerald-400 mr-1.5"></i> +261 34 00 000 00</span>
+        <span data-cms="site-email" class="hidden sm:inline"><i class="fa-solid fa-envelope text-emerald-400 mr-1.5"></i> contact@istm-edu.mg</span>
+        <span data-cms="site-address" class="hidden md:inline"><i class="fa-solid fa-location-dot text-emerald-400 mr-1.5"></i> Campus Ankorondrano, Antananarivo</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="admin.html" class="hover:text-emerald-400 transition flex items-center gap-1 text-[11px]"><i class="fa-solid fa-lock text-emerald-500"></i> Espace Admin</a>
+        <button id="pwa-install-btn" class="hidden bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-2.5 py-0.5 rounded-full transition text-[11px] items-center gap-1">
+          <i class="fa-solid fa-download"></i> Installer App
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION PRINCIPALE -->
+  <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- LOGO -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 p-0.5 shadow-lg shadow-emerald-900/40 group-hover:scale-105 transition duration-300">
+          <div class="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center overflow-hidden">
+            <img id="site-logo-img" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=150" alt="ISTM Logo" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div>
+          <span id="site-name-display" class="text-xl font-extrabold tracking-tight text-white block leading-none">ISTM ACADEMY</span>
+          <span id="site-slogan-display" class="text-xs text-emerald-400 font-medium block mt-1">Technologie & Management</span>
+        </div>
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-300">
+        <a href="#hero" class="hover:text-emerald-400 transition">Accueil</a>
+        <a href="#presentation" class="hover:text-emerald-400 transition">À Propos</a>
+        <a href="#formations" class="hover:text-emerald-400 transition">Formations</a>
+        <a href="#enseignants" class="hover:text-emerald-400 transition">Enseignants</a>
+        <a href="#programmes" class="hover:text-emerald-400 transition">Programmes</a>
+        <a href="#tarifs" class="hover:text-emerald-400 transition">Frais</a>
+        <a href="#temoignages" class="hover:text-emerald-400 transition">Avis</a>
+        <a href="#faq" class="hover:text-emerald-400 transition">FAQ</a>
+        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+      </nav>
+
+      <!-- BOUTONS ACTION -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <a href="#inscription" class="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl shadow-md hover:shadow-emerald-500/20 transition transform active:scale-95 text-sm flex items-center gap-2">
+          <i class="fa-solid fa-pen-to-square"></i> S'inscrire
+        </a>
+      </div>
+
+      <!-- BOUTON MOBILE TOGGLE -->
+      <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white p-2">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+      <a href="#hero" class="block text-slate-300 hover:text-emerald-400 py-2 border-b border-slate-800">Accueil</a>
+      <a href="#presentation" class="block text-slate-300 hover:text-emerald-400 py-2 border-b border-slate-800">Présentation</a>
+      <a href="#formations" class="block text-slate-300 hover:text-emerald-400 py-2 border-b border-slate-800">Formations</a>
+      <a href="#enseignants" class="block text-slate-300 hover:text-emerald-400 py-2 border-b border-slate-800">Enseignants</a>
+      <a href="#programmes" class="block text-slate-300 hover:text-emerald-400 py-2 border-b border-slate-800">Programmes</a>
+      <a href="#tarifs" class="block text-slate-300 hover:text-emerald-400 py-2 border-b border-slate-800">Frais de scolarité</a>
+      <a href="#temoignages" class="block text-slate-300 hover:text-emerald-400 py-2 border-b border-slate-800">Témoignages</a>
+      <a href="#faq" class="block text-slate-300 hover:text-emerald-400 py-2 border-b border-slate-800">FAQ</a>
+      <a href="#inscription" class="block text-emerald-400 font-bold py-2 border-b border-slate-800">Pré-inscription</a>
+      <a href="#contact" class="block text-slate-300 hover:text-emerald-400 py-2">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO / BANNIÈRE MULTI-SLIDES -->
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-slate-950 py-16">
+      <!-- Slides Carousel Container -->
+      <div id="hero-carousel" class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Dynamic slide injected by script.js -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 text-center lg:text-left z-10">
+            <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold px-4 py-1.5 rounded-full shadow-inner">
+              <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+              Rentrée Académique 2025 - Admissions Ouvertes
+            </div>
+            <h1 id="hero-title-display" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-white">
+              Formez votre Avenir avec des <span class="text-gradient">Experts Métier</span>
+            </h1>
+            <p id="hero-subtitle-display" class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              L'Institut Supérieur de Technologie & Management prépare la nouvelle génération de leaders, d'ingénieurs et de managers. Un enseignement d'excellence axé sur la pratique et l'innovation.
+            </p>
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+              <a href="#inscription" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/25 transition duration-300 transform hover:-translate-y-0.5 flex items-center gap-3">
+                <span>Déposer ma Pré-inscription</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#formations" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-6 py-4 rounded-xl transition duration-300 flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-emerald-400"></i>
+                <span>Nos Formations</span>
+              </a>
+            </div>
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-800/80 text-center">
+              <div>
+                <p class="text-2xl lg:text-3xl font-extrabold text-emerald-400">98%</p>
+                <p class="text-xs text-slate-400">Taux d'insertion</p>
+              </div>
+              <div>
+                <p class="text-2xl lg:text-3xl font-extrabold text-teal-400">15+</p>
+                <p class="text-xs text-slate-400">Filières Métiers</p>
+              </div>
+              <div>
+                <p class="text-2xl lg:text-3xl font-extrabold text-emerald-400">2 500+</p>
+                <p class="text-xs text-slate-400">Diplômés Actifs</p>
+              </div>
+            </div>
+          </div>
+          <!-- Hero Image Container -->
+          <div class="relative flex justify-center">
+            <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-3xl filter blur-2xl opacity-50"></div>
+            <div class="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-800 max-w-lg w-full aspect-4/3">
+              <img id="hero-image-display" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800" alt="Campus ISTM" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide indicators dynamic -->
+      <div id="hero-slide-indicators" class="absolute bottom-4 flex gap-2 z-20"></div>
+    </section>
+
+    <!-- SECTION 2: PRÉSENTATION & MOT DE LA DIRECTION -->
+    <section id="presentation" class="py-20 bg-slate-900 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">À Propos de l'Institut</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Pédagogie Moderne & Ambition Académique</h3>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 text-slate-300 leading-relaxed">
+            <p id="pres-p1" class="text-lg font-medium text-slate-200">
+              Fondé avec l'ambition de rapprocher la formation académique des réalités et besoins réels des entreprises technologiques et commerciales, l'ISTM s'est imposé comme un pôle éducatif de référence.
+            </p>
+            <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/60 shadow-lg">
+              <div class="flex items-start gap-4">
+                <i class="fa-solid fa-quote-left text-3xl text-emerald-400"></i>
+                <div>
+                  <p class="italic text-slate-300 text-sm mb-3" id="pres-quote">
+                    "Notre mission ne se limite pas à transmettre des savoirs théoriques. Nous forgeons des esprits critiques, des compétences pratiques de pointe et l'esprit d'initiative nécessaire pour bâtir le monde de demain."
+                  </p>
+                  <p class="font-bold text-white text-sm">— Dr. Randrianarisoa, Directeur Général</p>
+                </div>
+              </div>
+            </div>
+            <p id="pres-long-text" class="text-sm text-slate-400 hidden-paragraph transition-all">
+              L'établissement met à la disposition des étudiants des infrastructures modernes, un réseau de professeurs qualifiés, des partenariats avec plus de 50 entreprises internationales et un accompagnement personnalisé vers le premier emploi ou l'entrepreneuriat.
+            </p>
+            <button class="read-more-btn text-emerald-400 hover:text-emerald-300 font-semibold text-sm inline-flex items-center gap-1 focus:outline-none">
+              <span>Lire la suite</span> <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+            </button>
+          </div>
+          <!-- Vision & Mission Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 hover:border-emerald-500/50 transition duration-300">
+              <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 text-xl mb-4">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Laboratoires High-Tech</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Équipements récents, réseaux fibre optique haut débit et serveurs de test dédiés.</p>
+            </div>
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 hover:border-emerald-500/50 transition duration-300">
+              <div class="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center text-teal-400 text-xl mb-4">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Stages & Immersion</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Insertion en entreprise dès la 2ème année avec un encadrement professionnel sur-mesure.</p>
+            </div>
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 hover:border-emerald-500/50 transition duration-300">
+              <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 text-xl mb-4">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Diplômes Homologués</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Formations habilitées par le Ministère de l'Enseignement Supérieur et de la Recherche.</p>
+            </div>
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 hover:border-emerald-500/50 transition duration-300">
+              <div class="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center text-teal-400 text-xl mb-4">
+                <i class="fa-solid fa-earth-africa"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Échanges Internationaux</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Programmes bilingues français-anglais et mobilités académiques partenaires.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FORMATIONS & CATALOGUE DE COURS -->
+    <section id="formations" class="py-20 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Nos Filières d'Avenir</h2>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Catalogue des Formations</h3>
+          </div>
+          <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">
+            Du BAC+1 au BAC+5, découvrez des parcours académiques conçus pour répondre aux défis numériques et économiques actuels.
+          </p>
+        </div>
+
+        <!-- Multi-item dynamic grid -->
+        <div id="formations-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Rendered dynamically from script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ENSEIGNANTS & ÉQUIPE PÉDAGOGIQUE -->
+    <section id="enseignants" class="py-20 bg-slate-900 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Corps Professoral</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Nos Enseignants & Intervenants Experts</h3>
+          <p class="text-slate-400 text-sm mt-3">Des universitaires chevronnés et des professionnels en activité pour un apprentissage ancré dans le réel.</p>
+        </div>
+
+        <!-- Teachers grid -->
+        <div id="enseignants-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Dynamic items from JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PROGRAMMES & ACTIVITÉS ACADÉMIQUES -->
+    <section id="programmes" class="py-20 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Vie Académique</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Programmes & Calendrier Scolaire</h3>
+        </div>
+        <div id="programmes-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Dynamic Content -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: TARIFS & ÉCOLAGES -->
+    <section id="tarifs" class="py-20 bg-slate-900 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Transparence & Accessibilité</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Grille Tarifaire & Ecolages</h3>
+          <p class="text-slate-400 text-sm mt-3">Des modalités d'échelonnement et des facilités de paiement adaptées à chaque étudiant.</p>
+        </div>
+
+        <div id="tarifs-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Dynamic pricing cards -->
+        </div>
+
+        <!-- Demande Brochure / Tarif CTA -->
+        <div class="mt-12 bg-slate-800/80 p-8 rounded-2xl border border-slate-700 text-center max-w-2xl mx-auto">
+          <h4 class="text-xl font-bold text-white mb-2">Besoin d'une grille tarifaire personnalisée ?</h4>
+          <p class="text-slate-400 text-sm mb-6">Recevez l'ensemble des détails sur le coût des fournitures, les bourses d'études et le calendrier des versements par e-mail ou WhatsApp.</p>
+          <a href="https://wa.me/261340000000?text=Bonjour,%20je%20souhaite%20recevoir%20la%20grille%20tarifaire%20complete%20de%20ISTM" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-6 py-3 rounded-xl transition">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Demander le Prospectus Financier
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: TÉMOIGNAGES & RÉUSSITES -->
+    <section id="temoignages" class="py-20 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Ils en Parlent</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Témoignages de nos Étudiants & Diplômés</h3>
+        </div>
+        <div id="temoignages-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Dynamic testimonials -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FAQ - QUESTIONS FRÉQUENTES -->
+    <section id="faq" class="py-20 bg-slate-900 border-t border-slate-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Aide & Renseignements</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Foire Aux Questions</h3>
+        </div>
+        <div id="faq-container" class="space-y-4">
+          <!-- FAQ Accordions rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION DYNAMIQUE DE SECTIONS SUR-MESURE (SI CRÉÉES PAR L'ADMIN) -->
+    <div id="custom-sections-container"></div>
+
+    <!-- SECTION 9: PRE-INSCRIPTION EN LIGNE + RDV -->
+    <section id="inscription" class="py-20 bg-slate-950 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl backdrop-blur-xl">
+          <div class="text-center mb-10">
+            <span class="bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full">Admissions Ouvertes</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-3">Formulaire de Pré-inscription</h2>
+            <p class="text-slate-400 text-sm mt-2">Remplissez vos informations pour réserver votre place et planifier un entretien téléphonique d'orientation.</p>
+          </div>
+
+          <form id="registration-form" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Nom complet *</label>
+                <input type="text" id="reg-fullname" required placeholder="Ex: Rakoto Jean" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Adresse E-mail *</label>
+                <input type="email" id="reg-email" required placeholder="Ex: jean@gmail.com" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition text-sm">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Numéro WhatsApp / Tél *</label>
+                <input type="tel" id="reg-phone" required placeholder="Ex: +261 34 12 345 67" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Filière Choisie *</label>
+                <select id="reg-field" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition text-sm">
+                  <option value="Génie Informatique & Web">Génie Informatique & Web</option>
+                  <option value="Management & Commerce Digital">Management & Commerce Digital</option>
+                  <option value="Sciences & Technologies">Sciences & Technologies</option>
+                  <option value="Lettres & Arts Numériques">Lettres & Arts Numériques</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Créneau Téléphonique Souhaité</label>
+              <select id="reg-time" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition text-sm">
+                <option value="Matin (09h00 - 12h00)">Matin (09h00 - 12h00)</option>
+                <option value="Après-midi (14h00 - 17h00)">Après-midi (14h00 - 17h00)</option>
+              </select>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-bold py-4 rounded-xl shadow-lg transition transform active:scale-98 flex items-center justify-center gap-2 text-base">
+              <i class="fa-solid fa-paper-plane"></i> Soumettre ma Demande de Pré-inscription
+            </button>
+          </form>
+          <div id="registration-success" class="hidden mt-6 bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 p-4 rounded-xl text-center text-sm">
+            <i class="fa-solid fa-circle-check text-xl mb-1 block"></i>
+            Votre demande a été transmise avec succès ! Notre secrétariat académique vous contactera très rapidement par téléphone.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: CONTACT & SECRÉTARIAT -->
+    <section id="contact" class="py-20 bg-slate-900 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Coordonnées Officielles</h2>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-6">Contactez le Secrétariat</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-8">
+              Notre équipe est disponible du Lundi au Vendredi de 08h00 à 17h00 et le Samedi de 08h00 à 12h00 pour répondre à toutes vos questions d'admission et d'orientation.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-emerald-400 text-xl">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-400">Adresse Physique</p>
+                  <p class="text-sm font-semibold text-white" data-cms="site-address">Campus Principal Ankorondrano, Antananarivo</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-emerald-400 text-xl">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-400">Téléphone Secrétariat</p>
+                  <p class="text-sm font-semibold text-white" data-cms="site-phone">+261 34 00 000 00</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-emerald-400 text-xl">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-400">Adresse E-mail</p>
+                  <p class="text-sm font-semibold text-white" data-cms="site-email">contact@istm-edu.mg</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Direct Quick Contact Form -->
+          <div class="bg-slate-800/60 p-8 rounded-2xl border border-slate-700/80">
+            <h4 class="text-xl font-bold text-white mb-6">Envoyer un Message Rapide</h4>
+            <form id="quick-contact-form" class="space-y-4">
+              <input type="text" required placeholder="Votre nom" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500">
+              <input type="email" required placeholder="Votre e-mail" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500">
+              <textarea rows="4" required placeholder="Votre message..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500"></textarea>
+              <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i> Envoyer le Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>
+        <p class="text-white font-bold text-base mb-1">ISTM - Institut Supérieur de Technologie & Management</p>
+        <p class="text-xs text-slate-500">© <span id="year"></span> Tous droits réservés. Habilité par le Ministère de l'Enseignement Supérieur.</p>
+      </div>
+      <div class="flex space-x-6 text-slate-400">
+        <a href="#" class="hover:text-emerald-400 transition"><i class="fa-brands fa-facebook text-xl"></i></a>
+        <a href="#" class="hover:text-emerald-400 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+        <a href="#" class="hover:text-emerald-400 transition"><i class="fa-brands fa-youtube text-xl"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BADGE DEVWEBIA OBLIGATOIRE -->
+  <div id="devwebia-badge" class="fixed bottom-4 left-4 z-50 bg-slate-900/95 text-white text-[11px] font-semibold px-3 py-1.5 rounded-full shadow-2xl border border-slate-700/50 backdrop-blur-md flex items-center gap-3 transition-all duration-300">
+    <a href="https://devwebia.mg" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition flex items-center gap-1.5">
+      <i class="fa-solid fa-wand-magic-sparkles text-amber-500"></i> Fait avec DEVWEBIA
+    </a>
+    <button onclick="document.getElementById('devwebia-badge').style.display='none'" class="text-slate-400 hover:text-white hover:bg-slate-800 rounded-full w-5 h-5 flex items-center justify-center transition" title="Fermer">
+      <i class="fa-solid fa-times"></i>
+    </button>
+  </div>
+
+  <!-- SDK FirebaseCompat -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  
+  <script src="firebase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
